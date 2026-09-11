@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Banner from "./components/Banner"
 import Nav from "./components/Nav"
 import Players from "./components/Players";
-import type Iplayer from "./types/Players.tsx";
+import type Iplayer from "./types/playerTypes";
 
 const playersfetch = async (): Promise<Iplayer[]> => {
   const res= fetch("./data.json");

@@ -1,4 +1,4 @@
-export interface Iplayer{
+export default interface Iplayer{
   id: string;
   name: string;
   category: string;
@@ -7,5 +7,4 @@ export interface Iplayer{
   rating: number;
   difficulty: string;
   badge: string;
-};
 }

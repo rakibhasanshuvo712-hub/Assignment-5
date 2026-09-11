@@ -1,4 +1,5 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
+import type Iplayer from '../types/playerTypes';
 
 interface PlayersProps {
     playersPromise: Promise<Iplayer[]>;
@@ -8,7 +9,7 @@ const Players = ({ playersPromise }: PlayersProps) => {
       const [counter, setCounter] = useState(0);
     const [selectedPlayers, setSelectedPlayers] = useState<Iplayer[]>([]);
 
-    const handleAddToStack = (player: Iplayer) => {
+    const handleAddToStack = (player:Iplayer) => {
          setCounter(counter + 1);
         setSelectedPlayers([...selectedPlayers, player]);
     };
