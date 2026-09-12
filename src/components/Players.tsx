@@ -1,5 +1,6 @@
 import { use, useState } from 'react';
 import type Iplayer from '../types/playerTypes';
+import { toast } from 'react-toastify';
 
 interface PlayersProps {
     playersPromise: Promise<Iplayer[]>;
@@ -11,7 +12,15 @@ const Players = ({ playersPromise }: PlayersProps) => {
 
     const handleAddToStack = (player:Iplayer) => {
          setCounter(counter + 1);
+
         setSelectedPlayers([...selectedPlayers, player]);
+
+        if (counter >= 0) {
+            toast(`${player.name} is already selected.`);
+        }
+        else
+            return "No technologies selected yet."; 
+
     };
 
      console.log(playersPromise);

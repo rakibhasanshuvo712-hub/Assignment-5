@@ -21,6 +21,7 @@ function App() {
       <Players playersPromise ={playersPromise} /></Suspense>
       <Footer />
       
+      
     </>
   )
 }
