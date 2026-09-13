@@ -47,32 +47,26 @@ const Players = ({ playersPromise }: PlayersProps) => {
       <h1 className="text-4xl">
         Explore the <span className="text-red-500">Technologies</span>
       </h1>
-
       <p>
         Pick one technology per category to build your ideal stack.
       </p>
-
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-
         <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-8">
           {players.map((player) => {
             const isAdded = selectedPlayers.some(
               (item) => item.id === player.id
             );
-
             return (
               <div
                 key={player.id}
-                className="card bg-base-100 shadow-xl"
-              >
+                className="card bg-base-100 shadow-xl">
+              
                 <figure className="pt-6">
                   <img
                     src={player.icon}
                     alt={player.name}
-                    className="w-16 h-16 object-contain"
-                  />
+                    className="w-16 h-16 object-contain"/>                
                 </figure>
-
                 <div className="card-body">
                   <div className="flex justify-between">
                     <h2 className="card-title">
@@ -99,17 +93,17 @@ const Players = ({ playersPromise }: PlayersProps) => {
                       disabled={isAdded}
                       className={`btn w-full ${
                         isAdded
-                          ? "bg-black text-white"
-                          : "btn-primary" }`}>
+                             ? "bg-black text-white"
+                        : "btn-primary" }`}>
                     
                       {isAdded ? "Added to Stack" : "Add To Stack"}
                        </button>
                   </div>
-                 </div>
+                      </div>
               </div>
             );
           })}
-        </div>
+          </div>
 
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-lg p-5">
@@ -137,8 +131,8 @@ const Players = ({ playersPromise }: PlayersProps) => {
                       <img
                         src={player.icon}
                         alt={player.name}
-                        className="gap-2"
-                      />
+                        className="gap-2" />
+                      
 
                       <div>
                         <p className="font-semibold">
