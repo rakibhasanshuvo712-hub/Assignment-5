@@ -4,7 +4,7 @@ import Foote from "../assets/logo-text.png";
 const Footer = () => {
     return (
         <div>
-        <div className="container mx-auto gap-32 py-32 flex">
+        <div className="container mx-auto gap-34 py-32 flex">
             <div className="grid gap-4">
                  < img src={Foote} alt="Logo" className="w-32 h-auto" />
                  <p>Curated tools, technologies, and resources for developers building<br />
@@ -15,8 +15,8 @@ modern software.</p>
                 <li>LinkedIn</li>
                </ul>
             </div>
-            <div className="grid">
-               <h4>Product</h4>
+            <div className="grid gap-0.5">
+               <h3>Product</h3>
                <ul>
                 <li>Home</li>
                 <li>Technologies</li>
